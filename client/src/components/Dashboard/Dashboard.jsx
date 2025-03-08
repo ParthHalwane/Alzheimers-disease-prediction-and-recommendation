@@ -29,11 +29,17 @@ function Dashboard() {
                     </button> */}
                     <button
                         className={`w-full text-left px-4 py-2 rounded hover:bg-gray-700 ${activeTab === "tips" ? "bg-gray-700" : ""}`}
+                        onClick={() => setActiveTab("test")}
+                    >
+                        Take a test
+                    </button>
+                    <button
+                        className={`w-full text-left px-4 py-2 rounded hover:bg-gray-700 ${activeTab === "tips" ? "bg-gray-700" : ""}`}
                         onClick={() => setActiveTab("tips")}
                     >
                         Tips
                     </button>
-                    <button
+                    {/* <button
                         className={`w-full text-left px-4 py-2 rounded hover:bg-gray-700 ${activeTab === "exercise" ? "bg-gray-700" : ""}`}
                         onClick={() => setActiveTab("exercise")}
                     >
@@ -44,7 +50,7 @@ function Dashboard() {
                         onClick={() => setActiveTab("about")}
                     >
                         About
-                    </button>
+                    </button> */}
                     <button
                         className={`w-full text-left px-4 py-2 rounded hover:bg-gray-700 ${activeTab === "profile" ? "bg-gray-700" : ""}`}
                         onClick={() => setActiveTab("profile")}
@@ -71,6 +77,7 @@ function Dashboard() {
 
                 )}
                 {activeTab === "history" && <h1 className="text-2xl font-bold">History</h1>}
+                {activeTab === "form" && <Form />}
                 {activeTab === "tips" && <Tips />}
                 {activeTab === "exercise" && <Exercise />}
                 {activeTab === "about" && <About />}
